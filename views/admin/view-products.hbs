@@ -1,0 +1,46 @@
+<!-- Navbar End -->
+
+
+
+    <!-- Table Start -->
+    <div class="container-fluid pt-4 px-4">
+    <div class=" row g-4">
+
+        <div class="col-sm-12 ">
+            <a href="/admin/add-product" class="btn btn-success ml-auto">Add Product</a>
+            <div class="bg-secondary rounded h-100 p-4 mt-3 ">
+                <h6 class="mb-4">Basic Table</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                           
+                            <th scope="col">Product</th>
+                             <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                             <th scope="col">About</th>
+                          
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each product}}
+                        <tr>
+                            
+                            <td>{{this.product}}</td>
+                            <td>{{this.category}}</td>
+                            <td>{{this.newprice}}</td>
+                            <td>{{this.about}}</td>
+                            
+                            <td>
+                                <a href="/admin/delete-product/{{this._id}}" class="btn btn-danger"
+                                    onclick="return confirm ('Are you sure to delete ?')">Delete </a>
+                            </td>
+
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

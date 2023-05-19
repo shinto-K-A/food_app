@@ -1,0 +1,58 @@
+<div class="ml-7 p-3 mb-2  row d-flex justify-content-center">
+      <form class="col-md-6" action="/admin/add-product" method="post">
+            <div class="form-group mt-3">
+                  <label for="exampleInputEmail1">Product Name</label>
+                  <input type="text" name="product" class="form-control  bg-white text-black" id="pname"
+                        aria-describedby="emailHelp" placeholder="Product name">
+
+            </div>
+            <div class="form-group mt-3">
+                  <label for="exampleInputEmail1">About</label>
+                  <input type="text" name="about" class="form-control bg-white text-black" id="about"
+                        aria-describedby="emailHelp" placeholder="About">
+
+            </div>
+
+            {{!-- category input --}}
+            <div class="form-group mt-3">
+                  <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                              
+                               <input type="text" name="category" class="form-control bg-white text-black" id="category"
+                             aria-describedby="emailHelp" placeholder="category">
+                             
+                             
+                         
+                        </div>
+                        
+                        {{!-- <select class="custom-select" id="inputGroupSelect01" name="category">
+                              {{#each response}}
+                              <option value="{{this}}" text="dark">{{this}}</option>
+                              {{/each}}
+                              
+                             
+                        </select> --}}
+                  </div>
+
+
+            </div>
+
+            <div class="form-group mt-3">
+                  <label for="exampleInputEmail1">New Price</label>
+                  <input type="number" name="newprice" class="form-control bg-white text-black" id="newPrice"
+                        aria-describedby="emailHelp" placeholder="New Price">
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+
+</div>

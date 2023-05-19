@@ -1,0 +1,44 @@
+<div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">User Table</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>  
+                                        <tr>
+                                            
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Phone</th>
+                                           
+                                            <th scope="col">Email</th>
+                                           
+                                             <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each user}}
+                                        <tr>
+                                            <th scope="row">{{this.firstName}}</th>
+                                            
+                                            <td>{{this.phoneNumber}}</td>
+                                           
+                                            <td>{{this.email}}</td>
+                                            
+                                            <td>
+                                                {{#if this.admin}}
+                                                <a href="/admin/remove-user?id={{this._id}}" class="btn btn-danger">Remove</a>
+                                                {{else}}
+                                                <a href="/admin/add-user?id={{this._id}}" class="btn btn-info">Add</a>
+                                                {{/if}}
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Table End -->
