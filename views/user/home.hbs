@@ -21,16 +21,19 @@
 
             <div class="row">
                   <div class="col-md-6 m-auto">
-
-                        <div>
-                              <h4>Name</h4>
+                        <div class="card" style="width: 18rem;">
+                              <div class="card-body">
+                                    <h4>Name</h4>
                               <label>{{user.firstName}}</label>
                               <h4>Email</h4>
                               <label>{{user.email}}</label>
                               <h4>Phone</h4>
                               <label>{{user.phoneNumber}}</label>
 
+                              </div>
                         </div>
+
+                        
                         <div>
                               <a href="/edit?id={{user._id}}" class="btn btn-primary">EDIT</a>
                         </div>
@@ -39,7 +42,7 @@
                         <div class="card" style="width: 18rem;">
                               <div class="card-body">
                                     <h5 class="card-title">{{this}}</h5>
-                                    
+
                                     <a href="/single?category={{this}}" class="btn btn-primary">View</a>
                               </div>
                         </div>
