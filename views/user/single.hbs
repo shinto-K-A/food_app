@@ -14,23 +14,35 @@
 </head>
 
 <body>
-   
+
 
 
       <section>
 
+
             <div class="row">
                   <div class="col-md-6 m-auto">
-                         {{#each response}}
-                         
-                        <div class="container mt-5 pl-5">
-                             
-                              <h2 class="text-center">{{this.product}}</h2>
-                              <h2 class="text-center">{{this.newprice}}</h2>
-                              
-                              
+
+                        {{#each response}}
+                        <div class="card">
+                              <div class="card-body">
+
+                                    <div class="container mt-5 pl-5">
+
+                                          <h2 class="text-center">{{this.product}}</h2>
+                                          <h2 class="text-center">{{this.newprice}}</h2>
+                                          <h5 class="text-center">{{this.category}}</h5>
+
+
+                                    </div>
+                              </div>
                         </div>
                         {{/each}}
+
+
+
+
+
                   </div>
             </div>
       </section>
